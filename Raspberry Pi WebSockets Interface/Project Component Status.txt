@@ -1,0 +1,21 @@
+Completed Techniques
+-Heart Beat Animation Using Only CSS
+-Basic Layout and Styling
+	-Gradient Background
+	-Target Specific CSS
+	-Table Layout
+	-ID Oriented Architecture
+	-Color Changing Icon
+	-SVG Icon
+-Google Maps Interface
+-GMaps Path Additions
+
+TODO
+-Websocket Interface
+-Update Heart Beat Rate Based On Div Contents
+-Lung/Air Icon for Resparation
+-Resparation Pane Styling
+-Location+Accelerometer Data Pane
+-Video Stream Data Pane
+-Audio?
+-Timestamp and Logo Pane

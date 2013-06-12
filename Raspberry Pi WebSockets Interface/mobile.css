@@ -1,0 +1,89 @@
+html{
+	background-color:#002d44
+}
+body{
+	background: linear-gradient(top,#09121e 0%,#003e66 100%);
+	font-family: Arial;
+}
+table{
+	border-collapse: separate;
+	border-spacing: 10px;
+}
+td{
+	text-shadow: 0px 0px 20px #407fab;
+	color: #fff;
+	box-shadow: 0px 0px 13px #47b6ff;
+	border-radius: 4px;
+	background: transparent;
+	border: solid 1px #003e66;
+	padding: 5px 5px 5px 5px;
+}
+tr#vitals{
+	height: 75px;
+}
+tr#location{
+	height: 200px;
+}
+tr#audiovideo{
+	height: 200px;
+}
+#logocell{
+	position: relative;
+}
+#logo{
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	right: 3px;
+	width: 50px;
+	height: 50px;
+	-webkit-animation: adjustHue 3s alternate infinite;
+}
+@-webkit-keyframes adjustHue {  
+   0% { -webkit-filter: hue-rotate(30deg) blur(3px); }  
+   50% { -webkit-filter: hue-rotate(60deg) blur(3px); }  
+   100% { -webkit-filter: hue-rotate(90deg) blur(3px); }     
+}
+@-webkit-keyframes heartBeat {  
+   0% { -webkit-transform: scale(1.0); }  
+   30% { -webkit-transform: scale(1.5); }  
+   50% { -webkit-transform: scale(1.0); }  
+   100% { -webkit-transform: scale(1.0); }  
+}
+div#map-canvas{
+	width: inherit;
+	height:200px;
+}
+td#heartRateCell{
+	width: 150px;
+	height: 75px;
+	text-align: center;
+}
+div#heart{
+	margin-left: auto;
+	color: #ff0000;
+	font-size: 50px;
+	width: 50px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: center;
+	-webkit-animation: heartBeat 1s alternate infinite;
+}
+div#heartRate{
+	width:50px;
+	height:50px;
+	display: inline-block;
+}
+div#heartRateNum{
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 0px;
+}
+div#heartRateUnits{
+	padding-top: 0px;
+	text-align: center;
+	font-size: 8px;
+}
+td#resparationRate{
+	width: 150px;
+}
