@@ -67,7 +67,9 @@ div#heart{
 	display: inline-block;
 	text-align: center;
 	vertical-align: center;
-	-webkit-animation: heartBeat 1s alternate infinite;
+	-webkit-animation: heartBeat alternate infinite;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-delay: 1s;
 }
 div#heartRate{
 	width:50px;

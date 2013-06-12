@@ -50,6 +50,23 @@
 				y+=0.5;
 				map.setCenter(newPoint);
 			}
+			var oldBPM = 60.2;
+			var oldRenderSpeed = (1/60.2)*30;
+			function updateHR()
+			{
+				var numericDisplay = document.getElementById("heartRateNum");
+				var randNum = Math.round((Math.random()*20+100)*10)/10;
+				numericDisplay.innerHTML = randNum+"";
+				var heartDisplay = document.getElementById("heart");
+				var newRenderedSpeed = (1/randNum)*30;
+				if(Math.abs(oldBPM-randNum)>10)
+				{
+					heartDisplay.style['-webkit-animation'] = 'none';
+					oldBPM = randNum;
+					oldRenderSpeed=newRenderedSpeed;
+					setTimeout(function(){heartDisplay.style['-webkit-animation'] = 'heartBeat alternate infinite';heartDisplay.style['-webkit-animation-duration'] = oldRenderSpeed+"s";},500);
+				}
+			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 	</head>
@@ -67,7 +84,7 @@
 			</tr>
 			<tr id="location">
 				<td><div id="map-canvas"/></td>
-				<td><button onclick="addPoint();">Add Point</button></td>
+				<td><button onclick="addPoint();">Add Point</button><button onclick="updateHR();">Change BPM</button></td>
 			</tr>
 			<tr id="audiovideo">
 				<td>Row 3 Col 1</td>
