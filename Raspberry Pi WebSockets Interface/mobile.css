@@ -1,5 +1,6 @@
 html{
 	background-color:#002d44
+	
 }
 body{
 	background: linear-gradient(top,#09121e 0%,#003e66 100%);
@@ -39,10 +40,20 @@ tr#audiovideo{
 	height: 50px;
 	-webkit-animation: adjustHue 3s alternate infinite;
 }
+@media screen{
 @-webkit-keyframes adjustHue {  
-   0% { -webkit-filter: hue-rotate(30deg) blur(3px); }  
-   50% { -webkit-filter: hue-rotate(60deg) blur(3px); }  
-   100% { -webkit-filter: hue-rotate(90deg) blur(3px); }     
+   0% { -webkit-filter: hue-rotate(30deg) blur(0px); }  
+   50% { -webkit-filter: hue-rotate(60deg) blur(0px); }  
+   100% { -webkit-filter: hue-rotate(90deg) blur(0px); }     
+}
+}
+@media only screen
+and (max-device-width: 480px){
+@-webkit-keyframes adjustHue {  
+   0% { -webkit-filter: hue-rotate(30deg) blur(10px); }  
+   50% { -webkit-filter: hue-rotate(60deg) blur(10px); }  
+   100% { -webkit-filter: hue-rotate(90deg) blur(10px); }     
+}
 }
 @-webkit-keyframes heartBeat {  
    0% { -webkit-transform: scale(1.0); }  
@@ -50,11 +61,18 @@ tr#audiovideo{
    50% { -webkit-transform: scale(1.0); }  
    100% { -webkit-transform: scale(1.0); }  
 }
+@-webkit-keyframes lungBreath {  
+   0% { -webkit-transform: scale(1.0); }  
+   100% { -webkit-transform: scale(1.5); }  
+}
+div#gmnoprint{
+	visibility: hidden;
+}
 div#map-canvas{
-	width: inherit;
+	width: 100%;
 	height:200px;
 }
-td#heartRateCell{
+td#heart-rate-cell{
 	width: 150px;
 	height: 75px;
 	text-align: center;
@@ -69,21 +87,109 @@ div#heart{
 	vertical-align: center;
 	-webkit-animation: heartBeat 1s alternate infinite;
 }
-div#heartRate{
-	width:50px;
+div#heart-rate{
+	width:80px;
 	height:50px;
 	display: inline-block;
 }
-div#heartRateNum{
+div#heart-rate-num{
 	font-size: 24px;
 	text-align: center;
 	padding-bottom: 0px;
 }
-div#heartRateUnits{
+div#heart-rate-units{
 	padding-top: 0px;
 	text-align: center;
 	font-size: 8px;
 }
-td#resparationRate{
+td#resparation-rate-cell{
 	width: 150px;
+	height: 75px;
+	text-align: center;
 }
+div#lung{
+	margin-left: auto;
+	color: #ff0000;
+	font-size: 50px;
+	margin-left: -20px;
+	width: 50px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: center;
+	-webkit-animation: lungBreath 1s alternate infinite;
+}
+div#resparation-rate{
+	width:50px;
+	height:50px;
+	display: inline-block;
+}
+div#resparation-rate-num{
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 0px;
+}
+div#resparation-rate-units{
+	padding-top: 0px;
+	text-align: center;
+	font-size: 8px;
+}
+td#location-cell{
+	width: 315px;
+}
+
+
+#loader{
+	width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  opacity: 1;
+  background-color: #002d44;
+  z-index: 99;
+  text-align: center;
+}
+#facebookG{
+position: absolute;
+	top: 200px;
+  left: 50%;
+  margin-left:-64px;
+  z-index: 100;
+width:128px}
+
+.facebook_blockG{
+background-color:#47b6ff;
+border:3px solid #000000;
+float:left;
+height:91px;
+margin-left:7px;
+width:24px;
+opacity:0.1;
+-webkit-animation-name:bounceG;
+-webkit-animation-duration:1.3s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:linear;
+-webkit-transform:scale(0.7);
+}
+
+#blockG_1{
+-webkit-animation-delay:0.39s;
+}
+
+#blockG_2{
+-webkit-animation-delay:0.52s;
+}
+
+#blockG_3{
+-webkit-animation-delay:0.65s;
+}
+
+@-webkit-keyframes bounceG{
+0%{
+-webkit-transform:scale(1.2);
+opacity:1}
+
+100%{
+-webkit-transform:scale(0.7);
+opacity:0.1}
