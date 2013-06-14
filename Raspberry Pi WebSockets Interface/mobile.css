@@ -6,10 +6,6 @@ body{
 	background: linear-gradient(top,#09121e 0%,#003e66 100%);
 	font-family: Arial;
 }
-table{
-	border-collapse: separate;
-	border-spacing: 10px;
-}
 td{
 	text-shadow: 0px 0px 20px #407fab;
 	color: #fff;
@@ -42,17 +38,43 @@ tr#audiovideo{
 }
 @media screen{
 @-webkit-keyframes adjustHue {  
-   0% { -webkit-filter: hue-rotate(30deg) blur(0px); }  
-   50% { -webkit-filter: hue-rotate(60deg) blur(0px); }  
-   100% { -webkit-filter: hue-rotate(90deg) blur(0px); }     
+   0% { -webkit-filter: hue-rotate(30deg) blur(1px); }  
+   50% { -webkit-filter: hue-rotate(60deg) blur(1px); }  
+   100% { -webkit-filter: hue-rotate(90deg) blur(1px); }     
+}
+table{
+	width: 530px;
+	height: 540px;
+	margin-top: -270px;
+	margin-left: -265px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border-collapse: separate;
+	border-spacing: 10px;
 }
 }
 @media only screen
 and (max-device-width: 480px){
 @-webkit-keyframes adjustHue {  
-   0% { -webkit-filter: hue-rotate(30deg) blur(10px); }  
-   50% { -webkit-filter: hue-rotate(60deg) blur(10px); }  
-   100% { -webkit-filter: hue-rotate(90deg) blur(10px); }     
+   0% { -webkit-filter: hue-rotate(30deg) blur(3px); }  
+   50% { -webkit-filter: hue-rotate(60deg) blur(3px); }  
+   100% { -webkit-filter: hue-rotate(90deg) blur(3px); }     
+}
+table{
+	width: 90%;
+	height: 90%;
+	margin-left: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-right: 5%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border-collapse: separate;
+	border-spacing: 10px;
 }
 }
 @-webkit-keyframes heartBeat {  
@@ -64,9 +86,6 @@ and (max-device-width: 480px){
 @-webkit-keyframes lungBreath {  
    0% { -webkit-transform: scale(1.0); }  
    100% { -webkit-transform: scale(1.5); }  
-}
-div#gmnoprint{
-	visibility: hidden;
 }
 div#map-canvas{
 	width: 100%;
@@ -136,8 +155,6 @@ div#resparation-rate-units{
 td#location-cell{
 	width: 315px;
 }
-
-
 #loader{
 	width: 100%;
   height: 100%;
@@ -152,7 +169,7 @@ td#location-cell{
 }
 #facebookG{
 position: absolute;
-	top: 200px;
+	top: 30%;
   left: 50%;
   margin-left:-64px;
   z-index: 100;
@@ -193,3 +210,12 @@ opacity:1}
 100%{
 -webkit-transform:scale(0.7);
 opacity:0.1}
+
+#video-stream{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 90%;
+	height: 90%;
+}

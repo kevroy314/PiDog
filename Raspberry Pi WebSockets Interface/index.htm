@@ -58,6 +58,7 @@
 			}
 		</script>
 		<script type="text/javascript">
+			//Heart Rate Update Example
 			var lastHR = 60.0;
 			var lastHRRenderSpeed = (1/60.2)*30;
 			function updateHR(newHR){
@@ -75,6 +76,7 @@
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 		<script type="text/javascript">
+			//Resparation Rate Update Example
 			var lastRR = 10.0;
 			var lastRRRenderSpeed = (1/60.2)*30;
 			function updateRR(newRR){
@@ -90,6 +92,22 @@
 				}
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		<script type="text/javascript">
+			var video = document.querySelector('video');
+			navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+									  navigator.mozGetUserMedia || navigator.msGetUserMedia;
+			function onFailSoHard(){
+				alert("Problem Capturing Video");
+			}
+			navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
+				var video = document.querySelector('video');
+				video.src = window.URL.createObjectURL(localMediaStream);
+				var videoCell = document.getElementById("video-cell");
+				video.width = videoCell.offsetWidth;
+				video.height = videoCell.offsetHeight;
+				video.onloadedmetadata = function(e) {};
+			}, onFailSoHard);
 		</script>
 	</head>
 	<body>
@@ -135,7 +153,7 @@
 				<td id="location-cell" colspan=2><div id="map-canvas"/></td>
 			</tr>
 			<tr id="audiovideo">
-				<td></td>
+				<td id="video-cell"><video width="100px" height="100px" id="video-stream" autoplay></video></td>
 				<td id="logocell">
 					<div id="debug">
 						<button onclick="addPointBenchmark();">Add Point</button>
