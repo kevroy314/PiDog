@@ -94,7 +94,7 @@
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 		<script type="text/javascript">
-			var video = document.querySelector('video');
+			/*var video = document.querySelector('video');
 			navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
 									  navigator.mozGetUserMedia || navigator.msGetUserMedia;
 			function onFailSoHard(){
@@ -107,7 +107,7 @@
 				video.width = videoCell.offsetWidth;
 				video.height = videoCell.offsetHeight;
 				video.onloadedmetadata = function(e) {};
-			}, onFailSoHard);
+			}, onFailSoHard);*/
 		</script>
 		<script type="text/javascript">
 			//Websocket Interface
@@ -122,7 +122,7 @@
 			}
 
 			// open connection
-			var connection = new WebSocket('ws://127.0.0.1:1337');
+			var connection = new WebSocket('ws://10.0.144.179:1337');
 			if(connection==undefined)
 				document.body.style.background = "green";
 			connection.onopen = function () {
@@ -201,7 +201,7 @@
 				<td id="location-cell" colspan=2><div id="map-canvas"/></td>
 			</tr>
 			<tr id="audiovideo">
-				<td id="video-cell"><video width="100px" height="100px" id="video-stream" autoplay></video></td>
+				<td id="video-cell"><video id="video-cell" type="video/ogg" src="http://10.0.144.179:1234/test.ogg" autoplay="true" width="100px" height="100px" scrolling="no" frameborder="0" style="border: 0px none transparent;">Unsupported!</video></video></td>
 				<td id="logocell">
 					<div id="debug">
 						<button onclick="addPointBenchmark();">Add Point</button>
